@@ -23,12 +23,12 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top nav_bg">
+    <nav class="navbar navbar-expand-lg fixed-top nav_bg" id="back">
         <div class="container text-uppercase">
             <a class="navbar-brand font-weight-bold" href="#">web developer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fa fa-bars text-dark"></i></span>
+                <span class="navbar-toggler-icon"><i class="fa fa-bars text-white"></i></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -566,12 +566,15 @@
 
     <script>
         const toTop = document.querySelector(".top");
+        const nav_bgd = document.getElementById("back");
 
         window.addEventListener("scroll", () => {
-            if (window.pageYOffset > 100) {
+            if (window.pageYOffset > 450) {
                 toTop.classList.add("ative");
+                nav_bgd.style.background = 'black';
             } else {
                 toTop.classList.remove("ative");
+                nav_bgd.style.background = 'transparent';
             }
         })
 
